@@ -9,6 +9,7 @@
 extension DIInjector {
 
     public static func registerTools() {
-        // register you tools
+        register { TemporaryImageCache() as ImageCache }
+        register { (_, args) in ImageLoader(url: args(), cache: DIInjector.resolve()) }
     }
 }
