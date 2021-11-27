@@ -7,9 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B869E1632752390B006CC3F2 /* Tools+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E15E2752390B006CC3F2 /* Tools+Dependencies.swift */; };
+		B869E1642752390B006CC3F2 /* Routing+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E15F2752390B006CC3F2 /* Routing+Dependencies.swift */; };
+		B869E1652752390B006CC3F2 /* ViewModels+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1602752390B006CC3F2 /* ViewModels+Dependencies.swift */; };
+		B869E1662752390B006CC3F2 /* Repositories+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1612752390B006CC3F2 /* Repositories+Dependencies.swift */; };
+		B869E1672752390B006CC3F2 /* DependenciesRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1622752390B006CC3F2 /* DependenciesRegistration.swift */; };
+		B869E16D275239A1006CC3F2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E16C275239A1006CC3F2 /* MainCoordinator.swift */; };
+		B869E17227523A5A006CC3F2 /* DIInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E17127523A5A006CC3F2 /* DIInjector.swift */; };
+		B869E17527523C93006CC3F2 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E17327523C93006CC3F2 /* MainTabView.swift */; };
+		B869E17627523C93006CC3F2 /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E17427523C93006CC3F2 /* MainTabViewModel.swift */; };
+		B869E17927523CB0006CC3F2 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E17727523CB0006CC3F2 /* TodayView.swift */; };
+		B869E17A27523CB0006CC3F2 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E17827523CB0006CC3F2 /* TodayViewModel.swift */; };
+		B869E17D27523CC9006CC3F2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E17B27523CC9006CC3F2 /* DetailView.swift */; };
+		B869E17E27523CC9006CC3F2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E17C27523CC9006CC3F2 /* DetailViewModel.swift */; };
+		B869E18227523D2A006CC3F2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E18027523D2A006CC3F2 /* SearchView.swift */; };
+		B869E18327523D2A006CC3F2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E18127523D2A006CC3F2 /* SearchViewModel.swift */; };
+		B869E18627523FD8006CC3F2 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E18527523FD8006CC3F2 /* View+Extensions.swift */; };
+		B869E189275240A4006CC3F2 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E188275240A4006CC3F2 /* LazyView.swift */; };
 		B8A0624C27523571003601FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0624B27523571003601FD /* AppDelegate.swift */; };
 		B8A0624E27523571003601FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0624D27523571003601FD /* SceneDelegate.swift */; };
-		B8A0625027523571003601FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0624F27523571003601FD /* ContentView.swift */; };
 		B8A0625227523571003601FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0625127523571003601FD /* Assets.xcassets */; };
 		B8A0625527523571003601FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0625427523571003601FD /* Preview Assets.xcassets */; };
 		B8A0625827523571003601FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A0625627523571003601FD /* LaunchScreen.storyboard */; };
@@ -35,10 +51,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B869E15E2752390B006CC3F2 /* Tools+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tools+Dependencies.swift"; sourceTree = "<group>"; };
+		B869E15F2752390B006CC3F2 /* Routing+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Routing+Dependencies.swift"; sourceTree = "<group>"; };
+		B869E1602752390B006CC3F2 /* ViewModels+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels+Dependencies.swift"; sourceTree = "<group>"; };
+		B869E1612752390B006CC3F2 /* Repositories+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Dependencies.swift"; sourceTree = "<group>"; };
+		B869E1622752390B006CC3F2 /* DependenciesRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesRegistration.swift; sourceTree = "<group>"; };
+		B869E16C275239A1006CC3F2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B869E17127523A5A006CC3F2 /* DIInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIInjector.swift; sourceTree = "<group>"; };
+		B869E17327523C93006CC3F2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B869E17427523C93006CC3F2 /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
+		B869E17727523CB0006CC3F2 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		B869E17827523CB0006CC3F2 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
+		B869E17B27523CC9006CC3F2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		B869E17C27523CC9006CC3F2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		B869E18027523D2A006CC3F2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		B869E18127523D2A006CC3F2 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		B869E18527523FD8006CC3F2 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		B869E188275240A4006CC3F2 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		B8A0624827523571003601FD /* Bright.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bright.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A0624B27523571003601FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A0624D27523571003601FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B8A0624F27523571003601FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B8A0625127523571003601FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8A0625427523571003601FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B8A0625727523571003601FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +108,161 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B869E1582752383E006CC3F2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B8A0624B27523571003601FD /* AppDelegate.swift */,
+				B8A0624D27523571003601FD /* SceneDelegate.swift */,
+				B8A0625627523571003601FD /* LaunchScreen.storyboard */,
+				B8A0625927523571003601FD /* Info.plist */,
+				B8A0625327523571003601FD /* Preview Content */,
+				B869E15C27523861006CC3F2 /* Ressources */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B869E15927523845006CC3F2 /* AppManagement */ = {
+			isa = PBXGroup;
+			children = (
+				B869E16A27523961006CC3F2 /* DependencyInjector */,
+				B869E16B2752397C006CC3F2 /* Routing */,
+			);
+			path = AppManagement;
+			sourceTree = "<group>";
+		};
+		B869E15A2752384F006CC3F2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B869E18B275249DB006CC3F2 /* Repositories */,
+				B869E18A275249CD006CC3F2 /* Models */,
+				B869E18727524094006CC3F2 /* UIElements */,
+				B869E18427523FB6006CC3F2 /* Extensions */,
+				B869E1682752391C006CC3F2 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B869E15B27523857006CC3F2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B869E17F27523D10006CC3F2 /* SearchView */,
+				B869E170275239FF006CC3F2 /* DetailView */,
+				B869E16F275239F5006CC3F2 /* TodayView */,
+				B869E16E275239D4006CC3F2 /* MainTabView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B869E15C27523861006CC3F2 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				B8A0625127523571003601FD /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		B869E1682752391C006CC3F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B869E16927523943006CC3F2 /* DIInjector */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B869E16927523943006CC3F2 /* DIInjector */ = {
+			isa = PBXGroup;
+			children = (
+				B869E17127523A5A006CC3F2 /* DIInjector.swift */,
+			);
+			path = DIInjector;
+			sourceTree = "<group>";
+		};
+		B869E16A27523961006CC3F2 /* DependencyInjector */ = {
+			isa = PBXGroup;
+			children = (
+				B869E15E2752390B006CC3F2 /* Tools+Dependencies.swift */,
+				B869E15F2752390B006CC3F2 /* Routing+Dependencies.swift */,
+				B869E1602752390B006CC3F2 /* ViewModels+Dependencies.swift */,
+				B869E1612752390B006CC3F2 /* Repositories+Dependencies.swift */,
+				B869E1622752390B006CC3F2 /* DependenciesRegistration.swift */,
+			);
+			path = DependencyInjector;
+			sourceTree = "<group>";
+		};
+		B869E16B2752397C006CC3F2 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				B869E16C275239A1006CC3F2 /* MainCoordinator.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		B869E16E275239D4006CC3F2 /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				B869E17327523C93006CC3F2 /* MainTabView.swift */,
+				B869E17427523C93006CC3F2 /* MainTabViewModel.swift */,
+			);
+			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		B869E16F275239F5006CC3F2 /* TodayView */ = {
+			isa = PBXGroup;
+			children = (
+				B869E17727523CB0006CC3F2 /* TodayView.swift */,
+				B869E17827523CB0006CC3F2 /* TodayViewModel.swift */,
+			);
+			path = TodayView;
+			sourceTree = "<group>";
+		};
+		B869E170275239FF006CC3F2 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				B869E17B27523CC9006CC3F2 /* DetailView.swift */,
+				B869E17C27523CC9006CC3F2 /* DetailViewModel.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		B869E17F27523D10006CC3F2 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				B869E18027523D2A006CC3F2 /* SearchView.swift */,
+				B869E18127523D2A006CC3F2 /* SearchViewModel.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		B869E18427523FB6006CC3F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B869E18527523FD8006CC3F2 /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B869E18727524094006CC3F2 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				B869E188275240A4006CC3F2 /* LazyView.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		B869E18A275249CD006CC3F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B869E18B275249DB006CC3F2 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		B8A0623F27523571003601FD = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +286,10 @@
 		B8A0624A27523571003601FD /* Bright */ = {
 			isa = PBXGroup;
 			children = (
-				B8A0624B27523571003601FD /* AppDelegate.swift */,
-				B8A0624D27523571003601FD /* SceneDelegate.swift */,
-				B8A0624F27523571003601FD /* ContentView.swift */,
-				B8A0625127523571003601FD /* Assets.xcassets */,
-				B8A0625627523571003601FD /* LaunchScreen.storyboard */,
-				B8A0625927523571003601FD /* Info.plist */,
-				B8A0625327523571003601FD /* Preview Content */,
+				B869E1582752383E006CC3F2 /* App */,
+				B869E15927523845006CC3F2 /* AppManagement */,
+				B869E15A2752384F006CC3F2 /* Common */,
+				B869E15B27523857006CC3F2 /* Scenes */,
 			);
 			path = Bright;
 			sourceTree = "<group>";
@@ -266,9 +450,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B869E189275240A4006CC3F2 /* LazyView.swift in Sources */,
+				B869E17227523A5A006CC3F2 /* DIInjector.swift in Sources */,
+				B869E1642752390B006CC3F2 /* Routing+Dependencies.swift in Sources */,
 				B8A0624C27523571003601FD /* AppDelegate.swift in Sources */,
 				B8A0624E27523571003601FD /* SceneDelegate.swift in Sources */,
-				B8A0625027523571003601FD /* ContentView.swift in Sources */,
+				B869E1672752390B006CC3F2 /* DependenciesRegistration.swift in Sources */,
+				B869E17627523C93006CC3F2 /* MainTabViewModel.swift in Sources */,
+				B869E18327523D2A006CC3F2 /* SearchViewModel.swift in Sources */,
+				B869E18227523D2A006CC3F2 /* SearchView.swift in Sources */,
+				B869E17927523CB0006CC3F2 /* TodayView.swift in Sources */,
+				B869E17527523C93006CC3F2 /* MainTabView.swift in Sources */,
+				B869E17A27523CB0006CC3F2 /* TodayViewModel.swift in Sources */,
+				B869E18627523FD8006CC3F2 /* View+Extensions.swift in Sources */,
+				B869E1652752390B006CC3F2 /* ViewModels+Dependencies.swift in Sources */,
+				B869E1662752390B006CC3F2 /* Repositories+Dependencies.swift in Sources */,
+				B869E1632752390B006CC3F2 /* Tools+Dependencies.swift in Sources */,
+				B869E16D275239A1006CC3F2 /* MainCoordinator.swift in Sources */,
+				B869E17D27523CC9006CC3F2 /* DetailView.swift in Sources */,
+				B869E17E27523CC9006CC3F2 /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,10 +637,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Bright/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bright/App/Preview Content\"";
 				DEVELOPMENT_TEAM = WLGFZCD2AB;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Bright/Info.plist;
+				INFOPLIST_FILE = Bright/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,10 +658,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Bright/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bright/App/Preview Content\"";
 				DEVELOPMENT_TEAM = WLGFZCD2AB;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Bright/Info.plist;
+				INFOPLIST_FILE = Bright/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
