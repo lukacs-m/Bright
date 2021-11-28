@@ -10,8 +10,9 @@ import Foundation
 import Combine
 
 final class MainTabViewModel: ObservableObject {
+    @Published var shouldShowTabbar = true
     
-   // @Injected var router: XXX type of router
+    @Injected private var uiRepository: UIModificator
 
     private var cancellables = Set<AnyCancellable>()
     
@@ -22,5 +23,11 @@ final class MainTabViewModel: ObservableObject {
 
 private extension MainTabViewModel {
     func setUp() {
+        uiRepository.shouldShowTabbar
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { value in
+                self.shouldShowTabbar = value
+            })
+            .store(in: &cancellables)
     }
 }

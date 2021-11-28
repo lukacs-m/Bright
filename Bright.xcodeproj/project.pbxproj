@@ -27,12 +27,51 @@
 		B869E18D27524A28006CC3F2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E18C27524A28006CC3F2 /* Photo.swift */; };
 		B869E18F27524A7A006CC3F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E18E27524A7A006CC3F2 /* User.swift */; };
 		B869E19127524B7E006CC3F2 /* PhotoStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E19027524B7E006CC3F2 /* PhotoStatistics.swift */; };
-		B869E19527524D1A006CC3F2 /* Common in Resources */ = {isa = PBXBuildFile; fileRef = B869E19327524D1A006CC3F2 /* Common */; };
-		B869E19627524D1A006CC3F2 /* Network in Resources */ = {isa = PBXBuildFile; fileRef = B869E19427524D1A006CC3F2 /* Network */; };
-		B869E19A27524DEA006CC3F2 /* ImageDowndloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E19927524DEA006CC3F2 /* ImageDowndloader.swift */; };
 		B869E19C27524EB1006CC3F2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E19B27524EB1006CC3F2 /* ImageLoader.swift */; };
 		B869E19E27524ECA006CC3F2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E19D27524ECA006CC3F2 /* ImageCache.swift */; };
 		B869E1A027524EFF006CC3F2 /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E19F27524EFF006CC3F2 /* AsyncImageLoader.swift */; };
+		B869E1A2275252A7006CC3F2 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1A1275252A7006CC3F2 /* Cache.swift */; };
+		B869E1A527525309006CC3F2 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1A427525309006CC3F2 /* AppConfig.swift */; };
+		B869E1A72752534F006CC3F2 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1A62752534F006CC3F2 /* PhotoRepository.swift */; };
+		B869E1AA27525363006CC3F2 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1A927525363006CC3F2 /* UserRepository.swift */; };
+		B869E1AC27525449006CC3F2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1AB27525449006CC3F2 /* API.swift */; };
+		B869E1DB275255B3006CC3F2 /* JoltNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1B6275255B3006CC3F2 /* JoltNetwork.swift */; };
+		B869E1DC275255B3006CC3F2 /* JoltNetwork+RequestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1B7275255B3006CC3F2 /* JoltNetwork+RequestActions.swift */; };
+		B869E1DD275255B3006CC3F2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1BA275255B3006CC3F2 /* Config.swift */; };
+		B869E1DE275255B3006CC3F2 /* RequestLogInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1BF275255B3006CC3F2 /* RequestLogInfos.swift */; };
+		B869E1DF275255B3006CC3F2 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1C0275255B3006CC3F2 /* LogLevel.swift */; };
+		B869E1E0275255B3006CC3F2 /* JoltLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1C1275255B3006CC3F2 /* JoltLogger.swift */; };
+		B869E1E1275255B3006CC3F2 /* AnyPublisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1C3275255B3006CC3F2 /* AnyPublisher+Extensions.swift */; };
+		B869E1E2275255B3006CC3F2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1C4275255B3006CC3F2 /* String+Extensions.swift */; };
+		B869E1E3275255B3006CC3F2 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1C5275255B3006CC3F2 /* Publisher+Extensions.swift */; };
+		B869E1E4275255B3006CC3F2 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1C6275255B3006CC3F2 /* CharacterSet+Extensions.swift */; };
+		B869E1E5275255B3006CC3F2 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1C7275255B3006CC3F2 /* URLRequest+Extensions.swift */; };
+		B869E1E7275255B3006CC3F2 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1C9275255B3006CC3F2 /* Dictionary+Extensions.swift */; };
+		B869E1E8275255B3006CC3F2 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1CA275255B3006CC3F2 /* Data+Extensions.swift */; };
+		B869E1E9275255B3006CC3F2 /* RequestResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1CC275255B3006CC3F2 /* RequestResponseType.swift */; };
+		B869E1EA275255B3006CC3F2 /* JoltNetworkConfigurationInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1CD275255B3006CC3F2 /* JoltNetworkConfigurationInitializer.swift */; };
+		B869E1EB275255B3006CC3F2 /* HttpActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1CE275255B3006CC3F2 /* HttpActions.swift */; };
+		B869E1EC275255B3006CC3F2 /* RequestParameterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1CF275255B3006CC3F2 /* RequestParameterType.swift */; };
+		B869E1ED275255B3006CC3F2 /* JoltNetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1D0275255B3006CC3F2 /* JoltNetworkErrors.swift */; };
+		B869E1EE275255B3006CC3F2 /* RequestConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1D1275255B3006CC3F2 /* RequestConfigs.swift */; };
+		B869E1EF275255B3006CC3F2 /* AuthentificationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1D2275255B3006CC3F2 /* AuthentificationHeader.swift */; };
+		B869E1F0275255B3006CC3F2 /* FormDataPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1D3275255B3006CC3F2 /* FormDataPart.swift */; };
+		B869E1F1275255B3006CC3F2 /* NetworkSessionHeaderConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1D5275255B3006CC3F2 /* NetworkSessionHeaderConfiguring.swift */; };
+		B869E1F2275255B3006CC3F2 /* JoltNetworkConfigurationInitialising.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1D6275255B3006CC3F2 /* JoltNetworkConfigurationInitialising.swift */; };
+		B869E1F3275255B3006CC3F2 /* JoltNetworkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1D7275255B3006CC3F2 /* JoltNetworkSettings.swift */; };
+		B869E1F4275255B3006CC3F2 /* NetworkSessionAuthentificationConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1D8275255B3006CC3F2 /* NetworkSessionAuthentificationConfiguring.swift */; };
+		B869E1F5275255B3006CC3F2 /* LogConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1D9275255B3006CC3F2 /* LogConfiguring.swift */; };
+		B869E1F6275255B3006CC3F2 /* JoltNetworkServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1DA275255B3006CC3F2 /* JoltNetworkServicing.swift */; };
+		B869E1F8275255DD006CC3F2 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1F7275255DD006CC3F2 /* APIConfig.swift */; };
+		B869E1FA27525734006CC3F2 /* Bright-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B869E1F927525734006CC3F2 /* Bright-Info.plist */; };
+		B869E1FF2752719B006CC3F2 /* PhotoTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1FE2752719B006CC3F2 /* PhotoTile.swift */; };
+		B869E201275273E8006CC3F2 /* ContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E200275273E8006CC3F2 /* ContentCoordinator.swift */; };
+		B869E20327528EE2006CC3F2 /* AppThemeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E20227528EE2006CC3F2 /* AppThemeConfig.swift */; };
+		B869E20E2753B72A006CC3F2 /* UIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E20D2753B72A006CC3F2 /* UIRepository.swift */; };
+		B869E2142753CF5E006CC3F2 /* Environnement+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E2132753CF5E006CC3F2 /* Environnement+Values.swift */; };
+		B869E2162753DACE006CC3F2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E2152753DACE006CC3F2 /* Array+Extensions.swift */; };
+		B869E2192753DCD0006CC3F2 /* UIGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E2182753DCD0006CC3F2 /* UIGrid.swift */; };
+		B869E21B275409FB006CC3F2 /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E21A275409FB006CC3F2 /* UIScreen+Extensions.swift */; };
 		B8A0624C27523571003601FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0624B27523571003601FD /* AppDelegate.swift */; };
 		B8A0624E27523571003601FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0624D27523571003601FD /* SceneDelegate.swift */; };
 		B8A0625227523571003601FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0625127523571003601FD /* Assets.xcassets */; };
@@ -80,12 +119,51 @@
 		B869E18C27524A28006CC3F2 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		B869E18E27524A7A006CC3F2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B869E19027524B7E006CC3F2 /* PhotoStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStatistics.swift; sourceTree = "<group>"; };
-		B869E19327524D1A006CC3F2 /* Common */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Common; sourceTree = "<group>"; };
-		B869E19427524D1A006CC3F2 /* Network */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Network; sourceTree = "<group>"; };
-		B869E19927524DEA006CC3F2 /* ImageDowndloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDowndloader.swift; sourceTree = "<group>"; };
 		B869E19B27524EB1006CC3F2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		B869E19D27524ECA006CC3F2 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		B869E19F27524EFF006CC3F2 /* AsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoader.swift; sourceTree = "<group>"; };
+		B869E1A1275252A7006CC3F2 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		B869E1A427525309006CC3F2 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		B869E1A62752534F006CC3F2 /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
+		B869E1A927525363006CC3F2 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		B869E1AB27525449006CC3F2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B869E1B6275255B3006CC3F2 /* JoltNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltNetwork.swift; sourceTree = "<group>"; };
+		B869E1B7275255B3006CC3F2 /* JoltNetwork+RequestActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JoltNetwork+RequestActions.swift"; sourceTree = "<group>"; };
+		B869E1BA275255B3006CC3F2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B869E1BF275255B3006CC3F2 /* RequestLogInfos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLogInfos.swift; sourceTree = "<group>"; };
+		B869E1C0275255B3006CC3F2 /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		B869E1C1275255B3006CC3F2 /* JoltLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltLogger.swift; sourceTree = "<group>"; };
+		B869E1C3275255B3006CC3F2 /* AnyPublisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Extensions.swift"; sourceTree = "<group>"; };
+		B869E1C4275255B3006CC3F2 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B869E1C5275255B3006CC3F2 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
+		B869E1C6275255B3006CC3F2 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
+		B869E1C7275255B3006CC3F2 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		B869E1C9275255B3006CC3F2 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		B869E1CA275255B3006CC3F2 /* Data+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		B869E1CC275255B3006CC3F2 /* RequestResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResponseType.swift; sourceTree = "<group>"; };
+		B869E1CD275255B3006CC3F2 /* JoltNetworkConfigurationInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltNetworkConfigurationInitializer.swift; sourceTree = "<group>"; };
+		B869E1CE275255B3006CC3F2 /* HttpActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpActions.swift; sourceTree = "<group>"; };
+		B869E1CF275255B3006CC3F2 /* RequestParameterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParameterType.swift; sourceTree = "<group>"; };
+		B869E1D0275255B3006CC3F2 /* JoltNetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltNetworkErrors.swift; sourceTree = "<group>"; };
+		B869E1D1275255B3006CC3F2 /* RequestConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConfigs.swift; sourceTree = "<group>"; };
+		B869E1D2275255B3006CC3F2 /* AuthentificationHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthentificationHeader.swift; sourceTree = "<group>"; };
+		B869E1D3275255B3006CC3F2 /* FormDataPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDataPart.swift; sourceTree = "<group>"; };
+		B869E1D5275255B3006CC3F2 /* NetworkSessionHeaderConfiguring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionHeaderConfiguring.swift; sourceTree = "<group>"; };
+		B869E1D6275255B3006CC3F2 /* JoltNetworkConfigurationInitialising.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltNetworkConfigurationInitialising.swift; sourceTree = "<group>"; };
+		B869E1D7275255B3006CC3F2 /* JoltNetworkSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltNetworkSettings.swift; sourceTree = "<group>"; };
+		B869E1D8275255B3006CC3F2 /* NetworkSessionAuthentificationConfiguring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionAuthentificationConfiguring.swift; sourceTree = "<group>"; };
+		B869E1D9275255B3006CC3F2 /* LogConfiguring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogConfiguring.swift; sourceTree = "<group>"; };
+		B869E1DA275255B3006CC3F2 /* JoltNetworkServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltNetworkServicing.swift; sourceTree = "<group>"; };
+		B869E1F7275255DD006CC3F2 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		B869E1F927525734006CC3F2 /* Bright-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bright-Info.plist"; sourceTree = "<group>"; };
+		B869E1FE2752719B006CC3F2 /* PhotoTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTile.swift; sourceTree = "<group>"; };
+		B869E200275273E8006CC3F2 /* ContentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCoordinator.swift; sourceTree = "<group>"; };
+		B869E20227528EE2006CC3F2 /* AppThemeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeConfig.swift; sourceTree = "<group>"; };
+		B869E20D2753B72A006CC3F2 /* UIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRepository.swift; sourceTree = "<group>"; };
+		B869E2132753CF5E006CC3F2 /* Environnement+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environnement+Values.swift"; sourceTree = "<group>"; };
+		B869E2152753DACE006CC3F2 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		B869E2182753DCD0006CC3F2 /* UIGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGrid.swift; sourceTree = "<group>"; };
+		B869E21A275409FB006CC3F2 /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		B8A0624827523571003601FD /* Bright.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bright.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A0624B27523571003601FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A0624D27523571003601FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +220,7 @@
 		B869E15927523845006CC3F2 /* AppManagement */ = {
 			isa = PBXGroup;
 			children = (
+				B869E1A3275252E5006CC3F2 /* Configurations */,
 				B869E16A27523961006CC3F2 /* DependencyInjector */,
 				B869E16B2752397C006CC3F2 /* Routing */,
 			);
@@ -151,6 +230,7 @@
 		B869E15A2752384F006CC3F2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B869E2122753CEFF006CC3F2 /* Environnement */,
 				B869E18B275249DB006CC3F2 /* Repositories */,
 				B869E18A275249CD006CC3F2 /* Models */,
 				B869E18727524094006CC3F2 /* UIElements */,
@@ -214,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				B869E16C275239A1006CC3F2 /* MainCoordinator.swift */,
+				B869E200275273E8006CC3F2 /* ContentCoordinator.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -230,6 +311,7 @@
 		B869E16F275239F5006CC3F2 /* TodayView */ = {
 			isa = PBXGroup;
 			children = (
+				B869E1FD27527182006CC3F2 /* UIElements */,
 				B869E17727523CB0006CC3F2 /* TodayView.swift */,
 				B869E17827523CB0006CC3F2 /* TodayViewModel.swift */,
 			);
@@ -257,7 +339,16 @@
 		B869E18427523FB6006CC3F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B869E1C3275255B3006CC3F2 /* AnyPublisher+Extensions.swift */,
+				B869E1C4275255B3006CC3F2 /* String+Extensions.swift */,
+				B869E1C5275255B3006CC3F2 /* Publisher+Extensions.swift */,
+				B869E1C6275255B3006CC3F2 /* CharacterSet+Extensions.swift */,
+				B869E1C7275255B3006CC3F2 /* URLRequest+Extensions.swift */,
+				B869E1C9275255B3006CC3F2 /* Dictionary+Extensions.swift */,
+				B869E1CA275255B3006CC3F2 /* Data+Extensions.swift */,
 				B869E18527523FD8006CC3F2 /* View+Extensions.swift */,
+				B869E2152753DACE006CC3F2 /* Array+Extensions.swift */,
+				B869E21A275409FB006CC3F2 /* UIScreen+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				B869E188275240A4006CC3F2 /* LazyView.swift */,
+				B869E2182753DCD0006CC3F2 /* UIGrid.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -283,6 +375,9 @@
 		B869E18B275249DB006CC3F2 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				B869E1A62752534F006CC3F2 /* PhotoRepository.swift */,
+				B869E1A927525363006CC3F2 /* UserRepository.swift */,
+				B869E20D2753B72A006CC3F2 /* UIRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -290,8 +385,10 @@
 		B869E19227524CE2006CC3F2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				B869E19327524D1A006CC3F2 /* Common */,
-				B869E19427524D1A006CC3F2 /* Network */,
+				B869E1B8275255B3006CC3F2 /* Common */,
+				B869E1B5275255B3006CC3F2 /* Network */,
+				B869E1AB27525449006CC3F2 /* API.swift */,
+				B869E1F7275255DD006CC3F2 /* APIConfig.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -299,6 +396,7 @@
 		B869E19727524D63006CC3F2 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
+				B869E1A1275252A7006CC3F2 /* Cache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -306,12 +404,127 @@
 		B869E19827524D6B006CC3F2 /* ImageDownloader */ = {
 			isa = PBXGroup;
 			children = (
-				B869E19927524DEA006CC3F2 /* ImageDowndloader.swift */,
 				B869E19B27524EB1006CC3F2 /* ImageLoader.swift */,
 				B869E19D27524ECA006CC3F2 /* ImageCache.swift */,
 				B869E19F27524EFF006CC3F2 /* AsyncImageLoader.swift */,
 			);
 			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		B869E1A3275252E5006CC3F2 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1A427525309006CC3F2 /* AppConfig.swift */,
+				B869E1F927525734006CC3F2 /* Bright-Info.plist */,
+				B869E20227528EE2006CC3F2 /* AppThemeConfig.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		B869E1B5275255B3006CC3F2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1B6275255B3006CC3F2 /* JoltNetwork.swift */,
+				B869E1B7275255B3006CC3F2 /* JoltNetwork+RequestActions.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B869E1B8275255B3006CC3F2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1B9275255B3006CC3F2 /* Configurations */,
+				B869E1BB275255B3006CC3F2 /* Utils */,
+				B869E1CB275255B3006CC3F2 /* Models+Enums */,
+				B869E1D4275255B3006CC3F2 /* Protocols */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B869E1B9275255B3006CC3F2 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1BA275255B3006CC3F2 /* Config.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		B869E1BB275255B3006CC3F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1BC275255B3006CC3F2 /* Tools */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B869E1BC275255B3006CC3F2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1BD275255B3006CC3F2 /* Logger */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B869E1BD275255B3006CC3F2 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1BE275255B3006CC3F2 /* Models */,
+				B869E1C0275255B3006CC3F2 /* LogLevel.swift */,
+				B869E1C1275255B3006CC3F2 /* JoltLogger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		B869E1BE275255B3006CC3F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1BF275255B3006CC3F2 /* RequestLogInfos.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B869E1CB275255B3006CC3F2 /* Models+Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1CC275255B3006CC3F2 /* RequestResponseType.swift */,
+				B869E1CD275255B3006CC3F2 /* JoltNetworkConfigurationInitializer.swift */,
+				B869E1CE275255B3006CC3F2 /* HttpActions.swift */,
+				B869E1CF275255B3006CC3F2 /* RequestParameterType.swift */,
+				B869E1D0275255B3006CC3F2 /* JoltNetworkErrors.swift */,
+				B869E1D1275255B3006CC3F2 /* RequestConfigs.swift */,
+				B869E1D2275255B3006CC3F2 /* AuthentificationHeader.swift */,
+				B869E1D3275255B3006CC3F2 /* FormDataPart.swift */,
+			);
+			path = "Models+Enums";
+			sourceTree = "<group>";
+		};
+		B869E1D4275255B3006CC3F2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1D5275255B3006CC3F2 /* NetworkSessionHeaderConfiguring.swift */,
+				B869E1D6275255B3006CC3F2 /* JoltNetworkConfigurationInitialising.swift */,
+				B869E1D7275255B3006CC3F2 /* JoltNetworkSettings.swift */,
+				B869E1D8275255B3006CC3F2 /* NetworkSessionAuthentificationConfiguring.swift */,
+				B869E1D9275255B3006CC3F2 /* LogConfiguring.swift */,
+				B869E1DA275255B3006CC3F2 /* JoltNetworkServicing.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B869E1FD27527182006CC3F2 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				B869E1FE2752719B006CC3F2 /* PhotoTile.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		B869E2122753CEFF006CC3F2 /* Environnement */ = {
+			isa = PBXGroup;
+			children = (
+				B869E2132753CF5E006CC3F2 /* Environnement+Values.swift */,
+			);
+			path = Environnement;
 			sourceTree = "<group>";
 		};
 		B8A0623F27523571003601FD = {
@@ -387,6 +600,8 @@
 			dependencies = (
 			);
 			name = Bright;
+			packageProductDependencies = (
+			);
 			productName = Bright;
 			productReference = B8A0624827523571003601FD /* Bright.app */;
 			productType = "com.apple.product-type.application";
@@ -458,6 +673,8 @@
 				Base,
 			);
 			mainGroup = B8A0623F27523571003601FD;
+			packageReferences = (
+			);
 			productRefGroup = B8A0624927523571003601FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -474,11 +691,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B869E1FA27525734006CC3F2 /* Bright-Info.plist in Resources */,
 				B8A0625827523571003601FD /* LaunchScreen.storyboard in Resources */,
 				B8A0625527523571003601FD /* Preview Assets.xcassets in Resources */,
 				B8A0625227523571003601FD /* Assets.xcassets in Resources */,
-				B869E19527524D1A006CC3F2 /* Common in Resources */,
-				B869E19627524D1A006CC3F2 /* Network in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,32 +719,72 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B869E1F4275255B3006CC3F2 /* NetworkSessionAuthentificationConfiguring.swift in Sources */,
+				B869E2192753DCD0006CC3F2 /* UIGrid.swift in Sources */,
 				B869E189275240A4006CC3F2 /* LazyView.swift in Sources */,
+				B869E1E2275255B3006CC3F2 /* String+Extensions.swift in Sources */,
 				B869E19127524B7E006CC3F2 /* PhotoStatistics.swift in Sources */,
 				B869E17227523A5A006CC3F2 /* DIInjector.swift in Sources */,
+				B869E1F1275255B3006CC3F2 /* NetworkSessionHeaderConfiguring.swift in Sources */,
+				B869E1FF2752719B006CC3F2 /* PhotoTile.swift in Sources */,
 				B869E1642752390B006CC3F2 /* Routing+Dependencies.swift in Sources */,
 				B8A0624C27523571003601FD /* AppDelegate.swift in Sources */,
 				B869E18D27524A28006CC3F2 /* Photo.swift in Sources */,
+				B869E20E2753B72A006CC3F2 /* UIRepository.swift in Sources */,
 				B8A0624E27523571003601FD /* SceneDelegate.swift in Sources */,
-				B869E19A27524DEA006CC3F2 /* ImageDowndloader.swift in Sources */,
+				B869E1DF275255B3006CC3F2 /* LogLevel.swift in Sources */,
+				B869E1E0275255B3006CC3F2 /* JoltLogger.swift in Sources */,
+				B869E1EF275255B3006CC3F2 /* AuthentificationHeader.swift in Sources */,
+				B869E1F8275255DD006CC3F2 /* APIConfig.swift in Sources */,
 				B869E1672752390B006CC3F2 /* DependenciesRegistration.swift in Sources */,
+				B869E1EB275255B3006CC3F2 /* HttpActions.swift in Sources */,
+				B869E21B275409FB006CC3F2 /* UIScreen+Extensions.swift in Sources */,
 				B869E17627523C93006CC3F2 /* MainTabViewModel.swift in Sources */,
+				B869E1E9275255B3006CC3F2 /* RequestResponseType.swift in Sources */,
+				B869E1A2275252A7006CC3F2 /* Cache.swift in Sources */,
+				B869E1E3275255B3006CC3F2 /* Publisher+Extensions.swift in Sources */,
 				B869E19E27524ECA006CC3F2 /* ImageCache.swift in Sources */,
+				B869E2162753DACE006CC3F2 /* Array+Extensions.swift in Sources */,
+				B869E1EA275255B3006CC3F2 /* JoltNetworkConfigurationInitializer.swift in Sources */,
+				B869E1DE275255B3006CC3F2 /* RequestLogInfos.swift in Sources */,
 				B869E18327523D2A006CC3F2 /* SearchViewModel.swift in Sources */,
 				B869E18227523D2A006CC3F2 /* SearchView.swift in Sources */,
+				B869E1E4275255B3006CC3F2 /* CharacterSet+Extensions.swift in Sources */,
 				B869E17927523CB0006CC3F2 /* TodayView.swift in Sources */,
+				B869E1F5275255B3006CC3F2 /* LogConfiguring.swift in Sources */,
+				B869E1DB275255B3006CC3F2 /* JoltNetwork.swift in Sources */,
 				B869E17527523C93006CC3F2 /* MainTabView.swift in Sources */,
 				B869E19C27524EB1006CC3F2 /* ImageLoader.swift in Sources */,
+				B869E1F6275255B3006CC3F2 /* JoltNetworkServicing.swift in Sources */,
+				B869E1A527525309006CC3F2 /* AppConfig.swift in Sources */,
 				B869E17A27523CB0006CC3F2 /* TodayViewModel.swift in Sources */,
 				B869E18627523FD8006CC3F2 /* View+Extensions.swift in Sources */,
+				B869E2142753CF5E006CC3F2 /* Environnement+Values.swift in Sources */,
+				B869E1DD275255B3006CC3F2 /* Config.swift in Sources */,
 				B869E1652752390B006CC3F2 /* ViewModels+Dependencies.swift in Sources */,
 				B869E1662752390B006CC3F2 /* Repositories+Dependencies.swift in Sources */,
+				B869E1A72752534F006CC3F2 /* PhotoRepository.swift in Sources */,
+				B869E1AC27525449006CC3F2 /* API.swift in Sources */,
+				B869E1F2275255B3006CC3F2 /* JoltNetworkConfigurationInitialising.swift in Sources */,
+				B869E201275273E8006CC3F2 /* ContentCoordinator.swift in Sources */,
+				B869E1E1275255B3006CC3F2 /* AnyPublisher+Extensions.swift in Sources */,
+				B869E1F3275255B3006CC3F2 /* JoltNetworkSettings.swift in Sources */,
 				B869E1632752390B006CC3F2 /* Tools+Dependencies.swift in Sources */,
+				B869E1EC275255B3006CC3F2 /* RequestParameterType.swift in Sources */,
+				B869E1AA27525363006CC3F2 /* UserRepository.swift in Sources */,
 				B869E16D275239A1006CC3F2 /* MainCoordinator.swift in Sources */,
 				B869E17D27523CC9006CC3F2 /* DetailView.swift in Sources */,
+				B869E1F0275255B3006CC3F2 /* FormDataPart.swift in Sources */,
 				B869E17E27523CC9006CC3F2 /* DetailViewModel.swift in Sources */,
+				B869E1E8275255B3006CC3F2 /* Data+Extensions.swift in Sources */,
+				B869E1ED275255B3006CC3F2 /* JoltNetworkErrors.swift in Sources */,
 				B869E18F27524A7A006CC3F2 /* User.swift in Sources */,
+				B869E1E5275255B3006CC3F2 /* URLRequest+Extensions.swift in Sources */,
 				B869E1A027524EFF006CC3F2 /* AsyncImageLoader.swift in Sources */,
+				B869E1EE275255B3006CC3F2 /* RequestConfigs.swift in Sources */,
+				B869E1DC275255B3006CC3F2 /* JoltNetwork+RequestActions.swift in Sources */,
+				B869E20327528EE2006CC3F2 /* AppThemeConfig.swift in Sources */,
+				B869E1E7275255B3006CC3F2 /* Dictionary+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

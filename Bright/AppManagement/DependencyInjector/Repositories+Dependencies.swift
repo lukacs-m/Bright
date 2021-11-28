@@ -9,7 +9,8 @@
 extension DIInjector {
 
     public static func registerRepositories() {
-       // register you repositories
+        register { PhotosRepository(with: DIInjector.resolve()) as PhotosFetching }.scope(.application)
+        register { UserRepository(with: DIInjector.resolve()) as UserFetching }.scope(.application)
+        register { UIRepository() as UIModificator }.scope(.application)
     }
 }
-

@@ -8,27 +8,24 @@
 import Combine
 import SwiftUI
 
-struct AsyncImageLoader<Placeholder: View>: View {
+struct AsyncImage<Placeholder: View>: View {
     @ObservedObject private var loader: ImageLoader
     private let placeholder: Placeholder
     private let image: (UIImage) -> Image
-    
-    init(
-        url: URL,
-        @ViewBuilder placeholder: () -> Placeholder,
-        @ViewBuilder image: @escaping (UIImage) -> Image = Image.init(uiImage:)
-    ) {
+
+    init(url: URL,
+         @ViewBuilder placeholder: () -> Placeholder,
+         @ViewBuilder image: @escaping (UIImage) -> Image = Image.init(uiImage:)) {
         self.placeholder = placeholder()
         self.image = image
-        _loader = ObservedObject(wrappedValue: DIInjector.resolve(args: url))
-//          ImageLoader(url: url, cache: Environment(\.imageCache).wrappedValue)
+        _loader = ObservedObject(wrappedValue: ImageLoader(url: url, cache: SwiftUI.Environment(\.imageCache).wrappedValue))
     }
-    
+
     var body: some View {
         content
             .onAppear(perform: loader.load)
     }
-    
+
     private var content: some View {
         Group {
             if loader.image != nil {

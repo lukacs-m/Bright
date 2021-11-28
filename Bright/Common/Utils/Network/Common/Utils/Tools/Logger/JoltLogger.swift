@@ -92,7 +92,7 @@ public final class JoltNetworkLogger: JoltLogging {
             }
         }
         errorInfos += "\r\n================= ~ =================="
-        Logger.joltNetworking.debug("\(errorInfos)")
+        print("\(errorInfos)")
     }
 }
 
@@ -102,22 +102,22 @@ private extension JoltNetworkLogger {
         guard logLevel == .debugVerbose else {
             return
         }
-        Logger.joltNetworking.debug("\(urlRequest.curlString)")
+        print("\(urlRequest.curlString)")
     }
     
     func logRequest(for urlRequest: URLRequest) {
         if let httpAction = urlRequest.httpMethod,
            let url = urlRequest.url {
-            Logger.joltNetworking.debug("Request action: \(httpAction), to url: \(url.absoluteString)")
+            print("Request action: \(httpAction), to url: \(url.absoluteString)")
         }
         
         if let headerFields = urlRequest.allHTTPHeaderFields {
             let fields = headerFields.map{ "\($0.key) : \($0.value)" }.joined(separator: " \\\n\t")
-            Logger.joltNetworking.debug("Header Fields are: \(fields)")
+            print("Header Fields are: \(fields)")
         }
         
         if let requestBody = urlRequest.httpBody {
-            Logger.joltNetworking.debug("Request body: \(requestBody.decodeToString())")
+            print("Request body: \(requestBody.decodeToString())")
         }
     }
     
@@ -126,15 +126,13 @@ private extension JoltNetworkLogger {
               let url = urlResponse.url else {
                   return
               }
-        
-        Logger.joltNetworking.debug("Response status code: \(urlResponse.statusCode) for url: \(url.absoluteString)")
-        
+        print("Response status code: \(urlResponse.statusCode) for url: \(url.absoluteString)")
     }
     
     func logData(for data: Data?) {
         guard let data = data, logLevel == .debugVerbose else {
             return
         }
-        Logger.joltNetworking.debug("Response data: \(data.decodeToString())")
+        print("Response data: \(data.decodeToString())")
     }
 }

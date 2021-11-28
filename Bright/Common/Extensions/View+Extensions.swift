@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 extension View {
   
@@ -17,16 +18,15 @@ extension View {
         }
     }
     
-//    @ViewBuilder public func isLoading(_ loading: Bool = false) -> some View {
-//        ZStack {
-//            self
-//            if loading {
-//                Color.gray.opacity(0.2)
-//                ProgressView()
-//                    .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
-//            }
-//        }
-//    }
+    @ViewBuilder func valueChanged<T: Equatable>(value: T, onChange: @escaping (T) -> Void) -> some View {
+        if #available(iOS 14.0, *) {
+            self.onChange(of: value, perform: onChange)
+        } else {
+            self.onReceive(Just(value)) { (value) in
+                onChange(value)
+            }
+        }
+    }
     
     func eraseToAnyView() -> AnyView {
         AnyView(self)
@@ -35,13 +35,5 @@ extension View {
     func embedInNavigation() -> some View {
         NavigationView { self }
     }
-
-//    func tabBarHeightOffset(screenTag: Int, perform action: @escaping (CGFloat, Int) -> Void) -> some View {
-//        modifier(TabBarHeighOffsetViewModifier(action: action, screenTag: screenTag))
-//    }
-//
-//    func onRotate(perform action: @escaping (UIDeviceOrientation) -> Void) -> some View {
-//        modifier(DeviceRotationViewModifier(action: action))
-//    }
 }
 

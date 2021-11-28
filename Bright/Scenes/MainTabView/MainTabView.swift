@@ -11,40 +11,75 @@ import SwiftUI
 struct MainTabView: View {
     @InjectedObject private var viewModel: MainTabViewModel
     @Injected private var coordinator: TabbarViewNavigation
-
+    
     @State private var selectedTab = 0
-
+    @State private var opacity:Double = 1
+    
     var body: some View {
         mainContainer
+            .valueChanged(value: viewModel.shouldShowTabbar) { newValue in
+                opacity = !newValue ? 0 : 1
+            }
     }
 }
 
 extension MainTabView {
     private var mainContainer: some View {
-            tabView
+        tabView
+        
     }
 }
 
 extension MainTabView {
     private var tabView: some View {
-        TabView(selection: $selectedTab) {
-            createTabItem(for: .today)
-            createTabItem(for: .search, systemImage: true)
+        ZStack(alignment: .bottom) {
+            switch selectedTab {
+            case 0:
+                LazyView(coordinator.goToPage(for: .today))
+            case 1:
+                LazyView(coordinator.goToPage(for: .search)).embedInNavigation()
+            default:
+                Text("test")
+            }
+            VStack(spacing: 0) {
+                Divider()
+                    .padding(.bottom, 8)
+                HStack {
+                    ForEach(TabbarDestination.allCases, id:\.self) { tabLink in
+                        Button(action: {
+                            selectedTab = TabbarDestination.getTabNumber(for: tabLink)
+                        }) {
+                            Spacer()
+                            createTabItem(for: tabLink)
+                                .foregroundColor(selectedTab == TabbarDestination.getTabNumber(for: tabLink) ? Color.blue : Color.gray)
+                            Spacer()
+                        }
+                    }
+                }
+               
+            }
+            .frame(height: 50)
+            .background(Color(UIColor.systemBackground)).opacity(0.98)
+             .opacity(opacity)
         }
     }
 }
 
 extension MainTabView {
-    private func createTabItem(for type: TabbarDestination, systemImage: Bool = false) -> some View {
-        LazyView(coordinator.goToPage(for: type).embedInNavigation())
-            .tabItem {
-                if systemImage {
-                    Image(systemName: TabbarDestination.getIconName(for: type))
-                } else {
-                    Image(TabbarDestination.getIconName(for: type))
-                }
-                Text(TabbarDestination.getName(for: type))
+    private func createTabItem(for type: TabbarDestination) -> some View {
+        VStack(spacing: 3) {
+            if type == .search {
+                Image(systemName: TabbarDestination.getIconName(for: type))
+                    .font(.system(size: 24))
+            } else {
+                Image(TabbarDestination.getIconName(for: type))
+                    .resizable()
+                    .renderingMode(.template)
+                    .frame(width: 24, height: 24)
             }
+            Text(TabbarDestination.getName(for: type))
+                .font(.system(size: 12))
+        }
     }
 }
 

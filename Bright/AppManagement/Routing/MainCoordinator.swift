@@ -15,7 +15,7 @@ protocol TabbarViewNavigation {
 
 // MARK: - Tab enum
 
-enum TabbarDestination {
+enum TabbarDestination: CaseIterable {
     case today
     case search
     

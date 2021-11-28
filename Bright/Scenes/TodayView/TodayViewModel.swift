@@ -9,18 +9,47 @@
 import Foundation
 import Combine
 
-final class TodayViewModel: ObservableObject {
+struct PhotoDisplay: Identifiable, Equatable {
+    var id: String
+    let photo: Photo
+    var expand: Bool
     
-   // @Injected var router: XXX type of router
+    static func == (lhs: PhotoDisplay, rhs: PhotoDisplay) -> Bool {
+        lhs.id == rhs.id && lhs.expand == rhs.expand
+    }
+}
 
+final class TodayViewModel: ObservableObject {
+    @Published var photos: [PhotoDisplay] = []
+    
+    @Injected private var photoRepository: PhotosFetching
+    @Injected private var uiRepository: UIModificator
+    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
         setUp()
     }
+    
+    func hideTabbar() {
+        uiRepository.setTabbarVisibility(with: false)
+    }
 }
 
 private extension TodayViewModel {
     func setUp() {
+        photoRepository.photos()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    break
+                case let .failure(error):
+                    print("Error: \(error.localizedDescription)")
+                }
+            }) { [weak self] photos in
+                self?.photos = photos.map { PhotoDisplay(id: $0.id, photo: $0, expand: false) }
+            }
+            .store(in: &cancellables)
     }
 }

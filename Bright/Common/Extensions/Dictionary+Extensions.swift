@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Dictionary.swift
 //  
 //
 //  Created by Martin Lukacs on 29/09/2021.

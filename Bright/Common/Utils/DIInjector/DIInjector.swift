@@ -9,13 +9,10 @@ import Foundation
 import UIKit
 import SwiftUI
 
-// swiftlint:disable file_length
-
 public protocol DIInjectorRegistering {
     static func registerAllServices()
 }
 
-/// The Resolving protocol is used to make the Resolver registries available to a given class.
 public protocol DIInjecting {
     var resolver: DIInjector { get }
 }
@@ -26,63 +23,46 @@ extension DIInjecting {
     }
 }
 
-/// Resolver is a Dependency Injection registry that registers Services for later resolution and
-/// injection into newly constructed instances.
 public final class DIInjector {
 
     // MARK: - Defaults
 
-    /// Default registry used by the static Registration functions.
     public static var main: DIInjector = DIInjector()
-    /// Default registry used by the static Resolution functions and by the Resolving protocol.
     public static var root: DIInjector = main
-    /// Default scope applied when registering new objects.
     public static var defaultScope: ResolverScope = .graph
-    /// Internal scope cache used for .scope(.container)
     public lazy var cache: ResolverScope = ResolverScopeCache()
 
     // MARK: - Lifecycle
 
-    /// Initialize with optional child scope.
-    /// If child is provided this container is searched for registrations first, then any of its children.
     public init(child: DIInjector? = nil) {
         if let child = child {
             self.childContainers.append(child)
         }
     }
 
-    /// Initializer which maintained Resolver 1.0's "parent" functionality even when multiple child scopes were added in 1.4.3.
     @available(swift, deprecated: 5.0, message: "Please use Resolver(child:).")
     public init(parent: DIInjector) {
         self.childContainers.append(parent)
     }
 
-    /// Adds a child container to this container. Children will be searched if this container fails to find a registration factory
-    /// that matches the desired type.
     public func add(child: DIInjector) {
         lock.lock()
         defer { lock.unlock() }
         self.childContainers.append(child)
     }
 
-    /// Call function to force one-time initialization of the Resolver registries. Usually not needed as functionality
-    /// occurs automatically the first time a resolution function is called.
     public final func registerServices() {
         lock.lock()
         defer { lock.unlock() }
         registrationCheck()
     }
 
-    /// Call function to force one-time initialization of the Resolver registries. Usually not needed as functionality
-    /// occurs automatically the first time a resolution function is called.
     public static var registerServices: (() -> Void)? = {
         lock.lock()
         defer { lock.unlock() }
         registrationCheck()
     }
 
-    /// Called to effectively reset Resolver to its initial state, including recalling registerAllServices if it was provided. This will
-    /// also reset the three known caches: application, cached, shared.
     public static func reset() {
         lock.lock()
         defer { lock.unlock() }
@@ -96,56 +76,24 @@ public final class DIInjector {
 
     // MARK: - Service Registration
 
-    /// Static shortcut function used to register a specifc Service type and its instantiating factory method.
-    ///
-    /// - parameter type: Type of Service being registered. Optional, may be inferred by factory result type.
-    /// - parameter name: Named variant of Service being registered.
-    /// - parameter factory: Closure that constructs and returns instances of the Service.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public static func register<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil,
                                          factory: @escaping ResolverFactory<Service>) -> ResolverOptions<Service> {
         return main.register(type, name: name, factory: factory)
     }
 
-    /// Static shortcut function used to register a specific Service type and its instantiating factory method.
-    ///
-    /// - parameter type: Type of Service being registered. Optional, may be inferred by factory result type.
-    /// - parameter name: Named variant of Service being registered.
-    /// - parameter factory: Closure that constructs and returns instances of the Service.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public static func register<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil,
                                          factory: @escaping ResolverFactoryResolver<Service>) -> ResolverOptions<Service> {
         return main.register(type, name: name, factory: factory)
     }
 
-    /// Static shortcut function used to register a specific Service type and its instantiating factory method with multiple argument support.
-    ///
-    /// - parameter type: Type of Service being registered. Optional, may be inferred by factory result type.
-    /// - parameter name: Named variant of Service being registered.
-    /// - parameter factory: Closure that accepts arguments and constructs and returns instances of the Service.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public static func register<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil,
                                          factory: @escaping ResolverFactoryArgumentsN<Service>) -> ResolverOptions<Service> {
         return main.register(type, name: name, factory: factory)
     }
 
-    /// Registers a specific Service type and its instantiating factory method.
-    ///
-    /// - parameter type: Type of Service being registered. Optional, may be inferred by factory result type.
-    /// - parameter name: Named variant of Service being registered.
-    /// - parameter factory: Closure that constructs and returns instances of the Service.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public final func register<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil,
                                         factory: @escaping ResolverFactory<Service>) -> ResolverOptions<Service> {
@@ -158,14 +106,6 @@ public final class DIInjector {
         return ResolverOptions(registration: registration)
     }
 
-    /// Registers a specific Service type and its instantiating factory method.
-    ///
-    /// - parameter type: Type of Service being registered. Optional, may be inferred by factory result type.
-    /// - parameter name: Named variant of Service being registered.
-    /// - parameter factory: Closure that constructs and returns instances of the Service.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public final func register<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil,
                                         factory: @escaping ResolverFactoryResolver<Service>) -> ResolverOptions<Service> {
@@ -178,14 +118,6 @@ public final class DIInjector {
         return ResolverOptions(registration: registration)
     }
 
-    /// Registers a specific Service type and its instantiating factory method with multiple argument support.
-    ///
-    /// - parameter type: Type of Service being registered. Optional, may be inferred by factory result type.
-    /// - parameter name: Named variant of Service being registered.
-    /// - parameter factory: Closure that accepts arguments and constructs and returns instances of the Service.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public final func register<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil,
                                         factory: @escaping ResolverFactoryArgumentsN<Service>) -> ResolverOptions<Service> {
@@ -200,13 +132,6 @@ public final class DIInjector {
 
     // MARK: - Service Resolution
 
-    /// Static function calls the root registry to resolve a given Service type.
-    ///
-    /// - parameter type: Type of Service being resolved. Optional, may be inferred by assignment result type.
-    /// - parameter name: Named variant of Service being resolved.
-    /// - parameter args: Optional arguments that may be passed to registration factory.
-    ///
-    /// - returns: Instance of specified Service.
     public static func resolve<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil, args: Any? = nil) -> Service {
         lock.lock()
         defer { lock.unlock() }
@@ -217,15 +142,6 @@ public final class DIInjector {
         fatalError("RESOLVER: '\(Service.self):\(name?.rawValue ?? "NONAME")' not resolved. To disambiguate optionals use resolver.optional().")
     }
 
-    /// Resolves and returns an instance of the given Service type from the current registry or from its
-    /// parent registries.
-    ///
-    /// - parameter type: Type of Service being resolved. Optional, may be inferred by assignment result type.
-    /// - parameter name: Named variant of Service being resolved.
-    /// - parameter args: Optional arguments that may be passed to registration factory.
-    ///
-    /// - returns: Instance of specified Service.
-    ///
     public final func resolve<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil, args: Any? = nil) -> Service {
         lock.lock()
         defer { lock.unlock() }
@@ -236,14 +152,6 @@ public final class DIInjector {
         fatalError("RESOLVER: '\(Service.self):\(name?.rawValue ?? "NONAME")' not resolved. To disambiguate optionals use resolver.optional().")
     }
 
-    /// Static function calls the root registry to resolve an optional Service type.
-    ///
-    /// - parameter type: Type of Service being resolved. Optional, may be inferred by assignment result type.
-    /// - parameter name: Named variant of Service being resolved.
-    /// - parameter args: Optional arguments that may be passed to registration factory.
-    ///
-    /// - returns: Instance of specified Service.
-    ///
     public static func optional<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil, args: Any? = nil) -> Service? {
         lock.lock()
         defer { lock.unlock() }
@@ -254,15 +162,6 @@ public final class DIInjector {
         return nil
     }
 
-    /// Resolves and returns an optional instance of the given Service type from the current registry or
-    /// from its parent registries.
-    ///
-    /// - parameter type: Type of Service being resolved. Optional, may be inferred by assignment result type.
-    /// - parameter name: Named variant of Service being resolved.
-    /// - parameter args: Optional arguments that may be passed to registration factory.
-    ///
-    /// - returns: Instance of specified Service.
-    ///
     public final func optional<Service>(_ type: Service.Type = Service.self, name: DIInjector.Name? = nil, args: Any? = nil) -> Service? {
         lock.lock()
         defer { lock.unlock() }
@@ -275,8 +174,6 @@ public final class DIInjector {
 
     // MARK: - Internal
 
-    /// Internal function searches the current and child registries for a ResolverRegistration<Service> that matches
-    /// the supplied type and name.
     private final func lookup<Service>(_ type: Service.Type, name: DIInjector.Name?) -> ResolverRegistration<Service>? {
         let key = Int(bitPattern: ObjectIdentifier(Service.self))
         if let name = name?.rawValue {
@@ -294,7 +191,6 @@ public final class DIInjector {
         return nil
     }
 
-    /// Internal function adds a new registration to the proper container.
     private final func add<Service>(registration: ResolverRegistration<Service>, with key: Int, name: DIInjector.Name?) {
         if let name = name?.rawValue {
             namedRegistrations["\(key):\(name)"] = registration
@@ -310,7 +206,6 @@ public final class DIInjector {
     private var namedRegistrations = [String : Any]()
 }
 
-/// Resolving an instance of a service is a recursive process (service A needs a B which needs a C).
 private final class ResolverRecursiveLock {
     init() {
         pthread_mutexattr_init(&recursiveMutexAttr)
@@ -359,10 +254,8 @@ extension DIInjector {
 
 }
 
-/// Resolver Multiple Argument Support
 extension DIInjector {
 
-    /// Internal class used by Resolver for multiple argument support.
     public struct Args {
 
         private var args: [String:Any?]
@@ -440,26 +333,12 @@ public struct ResolverOptions<Service> {
 
     // MARK: - Fuctionality
 
-    /// Indicates that the registered Service also implements a specific protocol that may be resolved on
-    /// its own.
-    ///
-    /// - parameter type: Type of protocol being registered.
-    /// - parameter name: Named variant of protocol being registered.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public func implements<Protocol>(_ type: Protocol.Type, name: DIInjector.Name? = nil) -> ResolverOptions<Service> {
         registration.resolver?.register(type.self, name: name) { r, args in r.resolve(Service.self, args: args) as? Protocol }
         return self
     }
 
-    /// Allows easy assignment of injected properties into resolved Service.
-    ///
-    /// - parameter block: Resolution block.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public func resolveProperties(_ block: @escaping ResolverFactoryMutator<Service>) -> ResolverOptions<Service> {
         registration.update { existingFactory in
@@ -474,12 +353,6 @@ public struct ResolverOptions<Service> {
         return self
     }
 
-    /// Allows easy assignment of injected properties into resolved Service.
-    ///
-    /// - parameter block: Resolution block that also receives resolution arguments.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public func resolveProperties(_ block: @escaping ResolverFactoryMutatorArgumentsN<Service>) -> ResolverOptions<Service> {
         registration.update { existingFactory in
@@ -494,12 +367,6 @@ public struct ResolverOptions<Service> {
         return self
     }
 
-    /// Defines scope in which requested Service may be cached.
-    ///
-    /// - parameter block: Resolution block.
-    ///
-    /// - returns: ResolverOptions instance that allows further customization of registered Service.
-    ///
     @discardableResult
     public func scope(_ scope: ResolverScope) -> ResolverOptions<Service> {
         registration.scope = scope
@@ -673,32 +540,7 @@ public final class ResolverScopeContainer: ResolverScope {
     
 }
 
-
-//#if os(iOS)
-///// Storyboard Automatic Resolution Protocol
-//public protocol StoryboardResolving: Resolving {
-//    func resolveViewController()
-//}
-//
-///// Storyboard Automatic Resolution Trigger
-//public extension UIViewController {
-//    // swiftlint:disable unused_setter_value
-//    @objc dynamic var resolving: Bool {
-//        get {
-//            return true
-//        }
-//        set {
-//            if let vc = self as? StoryboardResolving {
-//                vc.resolveViewController()
-//            }
-//        }
-//    }
-//    // swiftlint:enable unused_setter_value
-//}
-//#endif
-
-// MARK: - <# name #>
-// Swift Property Wrappers
+// MARK: -  Swift Property Wrappers
 
 @propertyWrapper public struct Injected<Service> {
     private var service: Service
@@ -713,110 +555,6 @@ public final class ResolverScopeContainer: ResolverScope {
         mutating set { service = newValue }
     }
     public var projectedValue: Injected<Service> {
-        get { return self }
-        mutating set { self = newValue }
-    }
-}
-
-@propertyWrapper public struct OptionalInjected<Service> {
-    private var service: Service?
-    public init() {
-        self.service = DIInjector.optional(Service.self)
-    }
-    public init(name: DIInjector.Name? = nil, container: DIInjector? = nil) {
-        self.service = container?.optional(Service.self, name: name) ?? DIInjector.optional(Service.self, name: name)
-    }
-    public var wrappedValue: Service? {
-        get { return service }
-        mutating set { service = newValue }
-    }
-    public var projectedValue: OptionalInjected<Service> {
-        get { return self }
-        mutating set { self = newValue }
-    }
-}
-
-@propertyWrapper public struct LazyInjected<Service> {
-    private var lock = DIInjector.lock
-    private var initialize: Bool = true
-    private var service: Service!
-    public var container: DIInjector?
-    public var name: DIInjector.Name?
-    public var args: Any?
-    public init() {}
-    public init(name: DIInjector.Name? = nil, container: DIInjector? = nil) {
-        self.name = name
-        self.container = container
-    }
-    public var isEmpty: Bool {
-        lock.lock()
-        defer { lock.unlock() }
-        return service == nil
-    }
-    public var wrappedValue: Service {
-        mutating get {
-            lock.lock()
-            defer { lock.unlock() }
-            if initialize {
-                self.initialize = false
-                self.service = container?.resolve(Service.self, name: name, args: args) ?? DIInjector.resolve(Service.self, name: name, args: args)
-            }
-            return service
-        }
-        mutating set {
-            lock.lock()
-            defer { lock.unlock() }
-            initialize = false
-            service = newValue
-        }
-    }
-    public var projectedValue: LazyInjected<Service> {
-        get { return self }
-        mutating set { self = newValue }
-    }
-    public mutating func release() {
-        lock.lock()
-        defer { lock.unlock() }
-        self.service = nil
-    }
-}
-
-@propertyWrapper public struct WeakLazyInjected<Service> {
-    private var lock = DIInjector.lock
-    private var initialize: Bool = true
-    private weak var service: AnyObject?
-    public var container: DIInjector?
-    public var name: DIInjector.Name?
-    public var args: Any?
-    public init() {}
-    public init(name: DIInjector.Name? = nil, container: DIInjector? = nil) {
-        self.name = name
-        self.container = container
-    }
-    public var isEmpty: Bool {
-        lock.lock()
-        defer { lock.unlock() }
-        return service == nil
-    }
-    public var wrappedValue: Service? {
-        mutating get {
-            lock.lock()
-            defer { lock.unlock() }
-            if initialize {
-                self.initialize = false
-                self.service = (container?.resolve(Service.self, name: name, args: args)
-                                    ?? DIInjector.resolve(Service.self, name: name, args: args)) as AnyObject
-            }
-            return service as? Service
-        }
-        mutating set {
-            lock.lock()
-            defer { lock.unlock() }
-            initialize = false
-            service = newValue as AnyObject
-        }
-    }
-    public var projectedValue: WeakLazyInjected<Service> {
         get { return self }
         mutating set { self = newValue }
     }
