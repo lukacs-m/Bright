@@ -25,8 +25,8 @@ private extension MainTabViewModel {
     func setUp() {
         uiRepository.shouldShowTabbar
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { value in
-                self.shouldShowTabbar = value
+            .sink(receiveValue: { [weak self] value in
+                self?.shouldShowTabbar = value
             })
             .store(in: &cancellables)
     }

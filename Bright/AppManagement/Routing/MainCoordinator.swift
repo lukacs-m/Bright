@@ -31,7 +31,7 @@ enum TabbarDestination: CaseIterable {
     static func getIconName(for type: TabbarDestination) -> String {
         switch type {
         case .today:
-            return "today"
+            return AppThemeConfig.IconNames.todayIcon
         case .search:
             return "magnifyingglass"
         }

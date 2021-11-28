@@ -10,7 +10,7 @@ import SwiftUI
 
 struct DetailView: View {
     @InjectedObject private var viewModel: DetailViewModel
-
+    
     @State private var opacity: Double = 1
     @Binding var photoDisplay: PhotoDisplay
     @Binding var animate: Bool
@@ -18,7 +18,7 @@ struct DetailView: View {
     private let smallWidth: CGFloat = (UIScreen.screenWidth - 15) / 2
     private let bigWidth: CGFloat = UIScreen.screenWidth - (AppThemeConfig.StyleSize.mainPadding * 2)
     private let bigHeight: CGFloat = UIScreen.screenWidth * AppThemeConfig.StyleSize.mainPhotoTileRatio
-
+    
     private var frameWidth: CGFloat {
         photoDisplay.expand ? smallWidth : bigWidth
     }
@@ -44,9 +44,7 @@ extension DetailView {
         ZStack(alignment: .topLeading) {
             Color.white
                 .edgesIgnoringSafeArea(.all)
-            if viewModel.photos.isEmpty {
-                PhotoTileDisplay
-            }
+            PhotoTileDisplay
             if !viewModel.photos.isEmpty {
                 ScrollView {
                     VStack {
@@ -135,7 +133,6 @@ extension DetailView {
             
             if !photoDisplay.expand {
                 userInfos
-                    .opacity(photoDisplay.expand ? 0 : 1)
                     .padding(.horizontal, 40)
                     .padding(.vertical, 20)
             }
@@ -162,7 +159,7 @@ extension DetailView {
                 Text(photoDisplay.photo.user.username).fontWeight(.semibold)
                 Text("\(photoDisplay.photo.user.totalLikes) likes").fontWeight(.semibold)
             }.frame(height: 65)
-            .foregroundColor(.white)
+                .foregroundColor(.white)
         }
     }
 }
@@ -172,15 +169,15 @@ extension DetailView {
         VStack(alignment: .leading) {
             Text("Picture Statistics")
                 .font(.system(size: 25, weight: .regular, design: .default))
-
+            
             HStack {
-                Image("views")
+                Image(AppThemeConfig.IconNames.viewsIcon)
                     .resizable()
                     .frame(width: 30, height: 30)
                 Text("\(stats.views.total) views")
             }
             HStack {
-                Image("download")
+                Image(AppThemeConfig.IconNames.downloadIcon)
                     .resizable()
                     .frame(width: 25, height: 25)
                     .padding(.trailing, 5)

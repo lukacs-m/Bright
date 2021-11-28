@@ -28,17 +28,6 @@ struct User: Codable, Identifiable {
         URL(string: profileImage.medium) ?? URL(fileURLWithPath: "")
     }
 }
-//
-//// MARK: - UserLinks
-//struct UserLinks: Codable {
-//    let linksSelf, html, photos, likes: String
-//    let portfolio, following, followers: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case linksSelf = "self"
-//        case html, photos, likes, portfolio, following, followers
-//    }
-//}
 
 // MARK: - ProfileImage
 struct ProfileImage: Codable {

@@ -37,6 +37,10 @@ final class DetailViewModel: ObservableObject {
                 }
             }) { [weak self] userPhotos, stats in
                 var newPhotos = userPhotos
+                if !newPhotos.contains(photo) {
+                    _ = newPhotos.removeLast()
+                    newPhotos.append(photo)
+                }
                 newPhotos.move(photo, to: 0)
                 self?.photos = newPhotos
                 self?.photoStatistic = stats

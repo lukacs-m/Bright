@@ -22,6 +22,7 @@ extension TodayView {
         ScrollView(.vertical) {
             VStack{
                 listHeader
+                    .opacity(animate ? 0 : 1)
                 mainList
             }
         }
@@ -67,7 +68,8 @@ extension TodayView {
                 .offset(x: viewModel.photos[index].expand ? -proxy.frame(in: .global).minX : 0)
                 .opacity(animate ? (viewModel.photos[index].expand ? 1 : 0) : 1)
                 .onTapGesture {
-                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
+                    withAnimation(.interactiveSpring(response: 0.3, dampingFraction: 0.8, blendDuration: 0)
+                    ) {
                         if !viewModel.photos[index].expand {
                             animate.toggle()
                             viewModel.photos[index].expand.toggle()

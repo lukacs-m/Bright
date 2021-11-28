@@ -14,7 +14,7 @@ struct MainTabView: View {
     
     @State private var selectedTab = 0
     @State private var opacity:Double = 1
-    
+ 
     var body: some View {
         mainContainer
             .valueChanged(value: viewModel.shouldShowTabbar) { newValue in
@@ -56,11 +56,10 @@ extension MainTabView {
                         }
                     }
                 }
-               
             }
             .frame(height: 50)
             .background(Color(UIColor.systemBackground)).opacity(0.98)
-             .opacity(opacity)
+            .opacity(opacity)
         }
     }
 }

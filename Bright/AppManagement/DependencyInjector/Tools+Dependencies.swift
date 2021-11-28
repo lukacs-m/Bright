@@ -9,8 +9,6 @@
 extension DIInjector {
 
     public static func registerTools() {
-        register { TemporaryImageCache() as ImageCache }
-        register { (_, args) in ImageLoader(url: args(), cache: DIInjector.optional()) }
         register { API() as JoltNetworkServicing }.scope(.application)
     }
 }

@@ -28,6 +28,20 @@ extension View {
         }
     }
     
+    @ViewBuilder func pageState(for state: PageState) -> some View {
+        self.overlay(
+            VStack {
+                if state == .full {
+                    EmptyView()
+                } else if case .empty(let message) = state {
+                    EmptySearchView(message: message)
+                } else {
+                    Text("")
+                }
+            }
+        )
+    }
+    
     func eraseToAnyView() -> AnyView {
         AnyView(self)
     }

@@ -15,4 +15,10 @@ enum AppThemeConfig {
         static let mainPadding: CGFloat = 20
         static let mainPhotoTileRatio: CGFloat = 6/5
     }
+    
+    enum IconNames {
+        static let downloadIcon = "download"
+        static let viewsIcon = "views"
+        static let todayIcon = "today"
+    }
 }

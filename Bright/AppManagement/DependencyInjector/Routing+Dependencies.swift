@@ -10,7 +10,6 @@ extension DIInjector {
 
     public static func registerRouting() {
         register { MainCoordinator() as TabbarViewNavigation }
-//        register { ContentCoordinator() as ContentNavigation }
     }
 }
 

@@ -17,6 +17,7 @@ extension APIConfig {
     enum EndPoints {
         static let photos = "photos"
         static let user = "users"
+        static let search = "search/photos"
     }
 }
 

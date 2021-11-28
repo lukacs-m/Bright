@@ -64,13 +64,16 @@
 		B869E1F6275255B3006CC3F2 /* JoltNetworkServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1DA275255B3006CC3F2 /* JoltNetworkServicing.swift */; };
 		B869E1F8275255DD006CC3F2 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1F7275255DD006CC3F2 /* APIConfig.swift */; };
 		B869E1FA27525734006CC3F2 /* Bright-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B869E1F927525734006CC3F2 /* Bright-Info.plist */; };
-		B869E201275273E8006CC3F2 /* ContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E200275273E8006CC3F2 /* ContentCoordinator.swift */; };
 		B869E20327528EE2006CC3F2 /* AppThemeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E20227528EE2006CC3F2 /* AppThemeConfig.swift */; };
 		B869E20E2753B72A006CC3F2 /* UIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E20D2753B72A006CC3F2 /* UIRepository.swift */; };
 		B869E2142753CF5E006CC3F2 /* Environnement+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E2132753CF5E006CC3F2 /* Environnement+Values.swift */; };
 		B869E2162753DACE006CC3F2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E2152753DACE006CC3F2 /* Array+Extensions.swift */; };
 		B869E2192753DCD0006CC3F2 /* UIGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E2182753DCD0006CC3F2 /* UIGrid.swift */; };
 		B869E21B275409FB006CC3F2 /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E21A275409FB006CC3F2 /* UIScreen+Extensions.swift */; };
+		B869E21D27543E73006CC3F2 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E21C27543E73006CC3F2 /* SearchRepository.swift */; };
+		B869E220275446E9006CC3F2 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E21F275446E9006CC3F2 /* FilterCell.swift */; };
+		B869E22227544700006CC3F2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E22127544700006CC3F2 /* SearchBar.swift */; };
+		B869E22427544732006CC3F2 /* EmptySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E22327544732006CC3F2 /* EmptySearchView.swift */; };
 		B8A0624C27523571003601FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0624B27523571003601FD /* AppDelegate.swift */; };
 		B8A0624E27523571003601FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0624D27523571003601FD /* SceneDelegate.swift */; };
 		B8A0625227523571003601FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0625127523571003601FD /* Assets.xcassets */; };
@@ -155,13 +158,16 @@
 		B869E1DA275255B3006CC3F2 /* JoltNetworkServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltNetworkServicing.swift; sourceTree = "<group>"; };
 		B869E1F7275255DD006CC3F2 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		B869E1F927525734006CC3F2 /* Bright-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bright-Info.plist"; sourceTree = "<group>"; };
-		B869E200275273E8006CC3F2 /* ContentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCoordinator.swift; sourceTree = "<group>"; };
 		B869E20227528EE2006CC3F2 /* AppThemeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeConfig.swift; sourceTree = "<group>"; };
 		B869E20D2753B72A006CC3F2 /* UIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRepository.swift; sourceTree = "<group>"; };
 		B869E2132753CF5E006CC3F2 /* Environnement+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environnement+Values.swift"; sourceTree = "<group>"; };
 		B869E2152753DACE006CC3F2 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		B869E2182753DCD0006CC3F2 /* UIGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGrid.swift; sourceTree = "<group>"; };
 		B869E21A275409FB006CC3F2 /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
+		B869E21C27543E73006CC3F2 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		B869E21F275446E9006CC3F2 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		B869E22127544700006CC3F2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		B869E22327544732006CC3F2 /* EmptySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchView.swift; sourceTree = "<group>"; };
 		B8A0624827523571003601FD /* Bright.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bright.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A0624B27523571003601FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A0624D27523571003601FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -292,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				B869E16C275239A1006CC3F2 /* MainCoordinator.swift */,
-				B869E200275273E8006CC3F2 /* ContentCoordinator.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 		B869E17F27523D10006CC3F2 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
+				B869E21E275446DD006CC3F2 /* UIElements */,
 				B869E18027523D2A006CC3F2 /* SearchView.swift */,
 				B869E18127523D2A006CC3F2 /* SearchViewModel.swift */,
 			);
@@ -375,6 +381,7 @@
 				B869E1A62752534F006CC3F2 /* PhotoRepository.swift */,
 				B869E1A927525363006CC3F2 /* UserRepository.swift */,
 				B869E20D2753B72A006CC3F2 /* UIRepository.swift */,
+				B869E21C27543E73006CC3F2 /* SearchRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -514,6 +521,16 @@
 				B869E2132753CF5E006CC3F2 /* Environnement+Values.swift */,
 			);
 			path = Environnement;
+			sourceTree = "<group>";
+		};
+		B869E21E275446DD006CC3F2 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				B869E21F275446E9006CC3F2 /* FilterCell.swift */,
+				B869E22127544700006CC3F2 /* SearchBar.swift */,
+				B869E22327544732006CC3F2 /* EmptySearchView.swift */,
+			);
+			path = UIElements;
 			sourceTree = "<group>";
 		};
 		B8A0623F27523571003601FD = {
@@ -720,6 +737,7 @@
 				B869E18D27524A28006CC3F2 /* Photo.swift in Sources */,
 				B869E20E2753B72A006CC3F2 /* UIRepository.swift in Sources */,
 				B8A0624E27523571003601FD /* SceneDelegate.swift in Sources */,
+				B869E22427544732006CC3F2 /* EmptySearchView.swift in Sources */,
 				B869E1DF275255B3006CC3F2 /* LogLevel.swift in Sources */,
 				B869E1E0275255B3006CC3F2 /* JoltLogger.swift in Sources */,
 				B869E1EF275255B3006CC3F2 /* AuthentificationHeader.swift in Sources */,
@@ -754,9 +772,9 @@
 				B869E1A72752534F006CC3F2 /* PhotoRepository.swift in Sources */,
 				B869E1AC27525449006CC3F2 /* API.swift in Sources */,
 				B869E1F2275255B3006CC3F2 /* JoltNetworkConfigurationInitialising.swift in Sources */,
-				B869E201275273E8006CC3F2 /* ContentCoordinator.swift in Sources */,
 				B869E1E1275255B3006CC3F2 /* AnyPublisher+Extensions.swift in Sources */,
 				B869E1F3275255B3006CC3F2 /* JoltNetworkSettings.swift in Sources */,
+				B869E22227544700006CC3F2 /* SearchBar.swift in Sources */,
 				B869E1632752390B006CC3F2 /* Tools+Dependencies.swift in Sources */,
 				B869E1EC275255B3006CC3F2 /* RequestParameterType.swift in Sources */,
 				B869E1AA27525363006CC3F2 /* UserRepository.swift in Sources */,
@@ -765,6 +783,8 @@
 				B869E1F0275255B3006CC3F2 /* FormDataPart.swift in Sources */,
 				B869E17E27523CC9006CC3F2 /* DetailViewModel.swift in Sources */,
 				B869E1E8275255B3006CC3F2 /* Data+Extensions.swift in Sources */,
+				B869E220275446E9006CC3F2 /* FilterCell.swift in Sources */,
+				B869E21D27543E73006CC3F2 /* SearchRepository.swift in Sources */,
 				B869E1ED275255B3006CC3F2 /* JoltNetworkErrors.swift in Sources */,
 				B869E18F27524A7A006CC3F2 /* User.swift in Sources */,
 				B869E1E5275255B3006CC3F2 /* URLRequest+Extensions.swift in Sources */,
