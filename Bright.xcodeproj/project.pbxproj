@@ -64,7 +64,6 @@
 		B869E1F6275255B3006CC3F2 /* JoltNetworkServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1DA275255B3006CC3F2 /* JoltNetworkServicing.swift */; };
 		B869E1F8275255DD006CC3F2 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1F7275255DD006CC3F2 /* APIConfig.swift */; };
 		B869E1FA27525734006CC3F2 /* Bright-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B869E1F927525734006CC3F2 /* Bright-Info.plist */; };
-		B869E1FF2752719B006CC3F2 /* PhotoTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E1FE2752719B006CC3F2 /* PhotoTile.swift */; };
 		B869E201275273E8006CC3F2 /* ContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E200275273E8006CC3F2 /* ContentCoordinator.swift */; };
 		B869E20327528EE2006CC3F2 /* AppThemeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E20227528EE2006CC3F2 /* AppThemeConfig.swift */; };
 		B869E20E2753B72A006CC3F2 /* UIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E20D2753B72A006CC3F2 /* UIRepository.swift */; };
@@ -156,7 +155,6 @@
 		B869E1DA275255B3006CC3F2 /* JoltNetworkServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltNetworkServicing.swift; sourceTree = "<group>"; };
 		B869E1F7275255DD006CC3F2 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		B869E1F927525734006CC3F2 /* Bright-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bright-Info.plist"; sourceTree = "<group>"; };
-		B869E1FE2752719B006CC3F2 /* PhotoTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTile.swift; sourceTree = "<group>"; };
 		B869E200275273E8006CC3F2 /* ContentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCoordinator.swift; sourceTree = "<group>"; };
 		B869E20227528EE2006CC3F2 /* AppThemeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeConfig.swift; sourceTree = "<group>"; };
 		B869E20D2753B72A006CC3F2 /* UIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRepository.swift; sourceTree = "<group>"; };
@@ -311,7 +309,6 @@
 		B869E16F275239F5006CC3F2 /* TodayView */ = {
 			isa = PBXGroup;
 			children = (
-				B869E1FD27527182006CC3F2 /* UIElements */,
 				B869E17727523CB0006CC3F2 /* TodayView.swift */,
 				B869E17827523CB0006CC3F2 /* TodayViewModel.swift */,
 			);
@@ -509,14 +506,6 @@
 				B869E1DA275255B3006CC3F2 /* JoltNetworkServicing.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		B869E1FD27527182006CC3F2 /* UIElements */ = {
-			isa = PBXGroup;
-			children = (
-				B869E1FE2752719B006CC3F2 /* PhotoTile.swift */,
-			);
-			path = UIElements;
 			sourceTree = "<group>";
 		};
 		B869E2122753CEFF006CC3F2 /* Environnement */ = {
@@ -726,7 +715,6 @@
 				B869E19127524B7E006CC3F2 /* PhotoStatistics.swift in Sources */,
 				B869E17227523A5A006CC3F2 /* DIInjector.swift in Sources */,
 				B869E1F1275255B3006CC3F2 /* NetworkSessionHeaderConfiguring.swift in Sources */,
-				B869E1FF2752719B006CC3F2 /* PhotoTile.swift in Sources */,
 				B869E1642752390B006CC3F2 /* Routing+Dependencies.swift in Sources */,
 				B8A0624C27523571003601FD /* AppDelegate.swift in Sources */,
 				B869E18D27524A28006CC3F2 /* Photo.swift in Sources */,

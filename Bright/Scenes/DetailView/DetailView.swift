@@ -13,7 +13,7 @@ struct DetailView: View {
 
     @State private var opacity: Double = 1
     @Binding var photoDisplay: PhotoDisplay
-    @Binding var hero: Bool
+    @Binding var animate: Bool
     
     private let smallWidth: CGFloat = (UIScreen.screenWidth - 15) / 2
     private let bigWidth: CGFloat = UIScreen.screenWidth - (AppThemeConfig.StyleSize.mainPadding * 2)
@@ -88,7 +88,7 @@ extension DetailView {
                     Button(action: {
                         withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)){
                             photoDisplay.expand.toggle()
-                            hero.toggle()
+                            animate.toggle()
                             viewModel.cleanContent()
                         }
                     }) {
