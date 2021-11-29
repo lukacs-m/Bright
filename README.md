@@ -11,14 +11,18 @@ Bright is meant as a little demonstration application showcasing several aspect 
 - [x] Embarks Cache / Image lazy loading / Network / Some animation
 - [x] Pure Swift
 - [x] iOS 13 compitible
+- [x] Search page
 
 ## ToDo
 - [x] Implement Linters (swiftlint/ swiftformat)
 - [x] Implement Testing 
 - [x] Implement new feature 
-- [x] Use dependency injection
+- [x] Use dependency injection further
 - [x] Documentation
-
+- [x] Crash logger (firebase)
+- [x] Refined caching system
+- [x] Paginated network call
+- [x] Infinite scrolling in pages
 
 ### About the project
 

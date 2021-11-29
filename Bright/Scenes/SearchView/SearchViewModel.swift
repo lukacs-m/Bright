@@ -29,7 +29,7 @@ enum PageState: Equatable {
     case loading
     case full
     
-    static let genericEmptyMessage = Self.empty("It's a bit empty here. Let's go looking for a fresh beer")
+    static let genericEmptyMessage = Self.empty("It's a bit empty here. Let's go looking for some nice images")
 }
 
 final class SearchViewModel: ObservableObject {

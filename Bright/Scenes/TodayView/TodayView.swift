@@ -34,7 +34,7 @@ extension TodayView {
     private var listHeader: some View {
         HStack{
             VStack(alignment: .leading, spacing: 12) {
-                Text("Friday, May 2020")
+                Text(viewModel.date)
                     .foregroundColor(.gray)
                     .font(.system(size: 20, weight: .bold, design: .default))
                 Text("Today")

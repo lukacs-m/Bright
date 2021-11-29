@@ -21,7 +21,7 @@ struct PhotoDisplay: Identifiable, Equatable {
 
 final class TodayViewModel: ObservableObject {
     @Published var photos: [PhotoDisplay] = []
-    
+    @Published var date: String = ""
     @Injected private var photoRepository: PhotosFetching
     @Injected private var uiRepository: UIModificator
     
@@ -51,5 +51,10 @@ private extension TodayViewModel {
                 self?.photos = photos.map { PhotoDisplay(id: $0.id, photo: $0, expand: false) }
             }
             .store(in: &cancellables)
+        date = getDate()
+    }
+    
+    func getDate() -> String {
+        return Date().toString(format: "EEEE, MMMM yyyy")
     }
 }
