@@ -55,7 +55,9 @@ extension MainTabView {
                             Spacer()
                         }
                     }
-                }.edgesIgnoringSafeArea(.bottom)
+                }
+                .padding(.bottom, 20)
+                .edgesIgnoringSafeArea(.bottom)
             }.edgesIgnoringSafeArea(.bottom)
             .background(Color(UIColor.systemBackground)).opacity(0.98)
             .opacity(opacity)
