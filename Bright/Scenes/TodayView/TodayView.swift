@@ -11,7 +11,7 @@ import SwiftUI
 struct TodayView: View {
     @InjectedObject private var viewModel: TodayViewModel
     @State private var animate = false
- 
+
     var body: some View {
         mainContainer
     }
@@ -19,7 +19,7 @@ struct TodayView: View {
 
 extension TodayView {
     private var mainContainer: some View {
-        ScrollView(.vertical) {
+        ScrollView(animate ? [] : .vertical) {
             VStack{
                 listHeader
                     .opacity(animate ? 0 : 1)
@@ -56,7 +56,7 @@ extension TodayView {
                     detailTile(for: index)
                 }
             }
-        }.padding(.bottom, 65)
+        }.padding(.bottom, 85)
     }
 }
 

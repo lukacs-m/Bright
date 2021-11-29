@@ -26,7 +26,6 @@ struct MainTabView: View {
 extension MainTabView {
     private var mainContainer: some View {
         tabView
-        
     }
 }
 
@@ -42,6 +41,7 @@ extension MainTabView {
                 Text("test")
             }
             VStack(spacing: 0) {
+                
                 Divider()
                     .padding(.bottom, 8)
                 HStack {
@@ -55,12 +55,11 @@ extension MainTabView {
                             Spacer()
                         }
                     }
-                }
-            }
-            .frame(height: 50)
+                }.edgesIgnoringSafeArea(.bottom)
+            }.edgesIgnoringSafeArea(.bottom)
             .background(Color(UIColor.systemBackground)).opacity(0.98)
             .opacity(opacity)
-        }
+        }.edgesIgnoringSafeArea(.bottom)
     }
 }
 

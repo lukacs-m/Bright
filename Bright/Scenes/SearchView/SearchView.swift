@@ -30,11 +30,14 @@ private extension SearchView {
 // MARK: - Search content scrollview
 private extension SearchView {
     var scrollViewContainer: some View {
-            ScrollView {
-                VStack(alignment: .center,
-                           spacing: 5) {
-                    
-                    Section(header: searchBarSection) {
+        ScrollView {
+            VStack(alignment: .center,
+                   spacing: 5) {
+                
+                Section(header: searchBarSection) {
+                    if viewModel.photos.isEmpty {
+                        EmptySearchView(message: "It's a bit empty here. Let's go looking for some nice images")
+                    } else {
                         UIGrid(columns: 2, list: viewModel.photos) { photo in
                             AsyncImage(url: photo.getURL(),
                                        placeholder: { Text("") },
@@ -44,9 +47,9 @@ private extension SearchView {
                                 .clipped()
                         }.padding(.horizontal, 5)
                     }
-                }.padding(.bottom, 65)
-            }
-            .pageState(for: viewModel.state)
+                }
+            }.padding(.bottom, 85)
+        }
     }
 }
 

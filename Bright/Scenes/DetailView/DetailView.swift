@@ -44,7 +44,8 @@ extension DetailView {
         ZStack(alignment: .topLeading) {
             Color.white
                 .edgesIgnoringSafeArea(.all)
-            PhotoTileDisplay
+            
+            PhotoTileDisplay.opacity(viewModel.photos.isEmpty ? 1 : 0)
             if !viewModel.photos.isEmpty {
                 ScrollView {
                     VStack {
@@ -54,7 +55,7 @@ extension DetailView {
                                 statisticDisplayContainer(with: stats)
                                     .padding(.horizontal)
                                 Spacer()
-                            }.padding(.bottom, 30)
+                            }.padding(.bottom, 85)
                         }
                     }
                 }
